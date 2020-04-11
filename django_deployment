@@ -1,0 +1,22 @@
+Deployment to Heroku(Django):
+
+It needs the following file, folder 
+- Procfile file
+- .keep file 
+- static folder
+
+1. Procfile: no extension (only a file name Procfile) which contain code bellow:
+‘
+web: gunicorn tutorial.wsgi --log-file -
+’
+- here ‘tutorial’ is the project name 
+- Procfile take in the root
+
+2. static: a folder in root contain .keep file
+
+3. Process: consequence command: enter the project & open terminal
+- heroku login
+- git push heroku master
+- heroku ps:scale web=1
+- Heroku open
+
