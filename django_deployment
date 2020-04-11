@@ -19,4 +19,6 @@ web: gunicorn tutorial.wsgi --log-file -
 - git push heroku master
 - heroku ps:scale web=1
 - Heroku open
+- heroku run python manage.py migrate
+- heroku run python manage.py createsuperuser
 
